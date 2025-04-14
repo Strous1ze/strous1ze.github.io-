@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Такие же meta-теги как в index.html -->
+    <title>Наши работы | Прочный Фундамент</title>
+    <!-- Подключение тех же стилей -->
+</head>
+<body>
+    <!-- Такой же header как в index.html -->
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Наши работы</h1>
+            <p>Реализованные проекты фундаментов для частных и коммерческих объектов</p>
+        </div>
+    </section>
+    
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio__filter">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="strip">Ленточные</button>
+                <button class="filter-btn" data-filter="slab">Плитные</button>
+                <button class="filter-btn" data-filter="pile">Свайные</button>
+            </div>
+            
+            <div class="portfolio__grid">
+                <div class="portfolio-item" data-category="strip">
+                    <img src="images/portfolio-1.jpg" alt="Фундамент для коттеджа">
+                    <div class="portfolio-item__overlay">
+                        <h3>Фундамент для коттеджа</h3>
+                        <p>Ленточный, 120 м²</p>
+                        <a href="#" class="btn btn--small">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Другие элементы портфолио -->
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Такой же cta-блок как в index.html -->
+    <!-- Такой же footer как в index.html -->
+    
+    <script>
+        // Фильтрация портфолио
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.portfolio-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
