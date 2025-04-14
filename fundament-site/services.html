@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Такие же meta-теги как в index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуги по строительству фундаментов | Прочный Фундамент</title>
-    <!-- Подключение тех же стилей -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css"> <!-- Новый файл анимаций -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- Такой же header как в index.html -->
+    <!-- Хедер (как в главном файле) -->
     
-    <section class="page-header">
+    <section class="services-hero animate__animated animate__fadeIn">
         <div class="container">
-            <h1>Наши услуги</h1>
-            <p>Профессиональное строительство всех типов фундаментов</p>
-        </div>
-    </section>
-    
-    <section class="services-detail">
-        <div class="container">
-            <div class="service-detail">
-                <div class="service-detail__content">
-                    <h2>Ленточный фундамент</h2>
-                    <p>Ленточный фундамент - это замкнутый контур из железобетонных балок, который возводится под всеми несущими стенами здания...</p>
-                    <h3>Преимущества:</h3>
-                    <ul>
-                        <li>Высокая несущая способность</li>
-                        <li>Равномерное распределение нагрузки</li>
-                        <li>Долговечность (50+ лет)</li>
-                    </ul>
-                    <div class="service-detail__price">
-                        <span>Цена: от 3 500 руб/м²</span>
-                        <button class="btn btn--primary">Заказать расчет</button>
-                    </div>
-                </div>
-                <div class="service-detail__image">
-                    <img src="images/service-detail-1.jpg" alt="Ленточный фундамент">
+            <h1 class="services-hero__title">Наши услуги</h1>
+            <p class="services-hero__subtitle">Профессиональное строительство фундаментов с гарантией 15 лет</p>
+            <div class="scroll-down">
+                <span>Листайте вниз</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
                 </div>
             </div>
-            
-            <!-- Аналогичные блоки для других типов фундаментов -->
-            
         </div>
     </section>
+
+    <section class="services-list">
+        <div class="container">
+            <!-- Карточка услуги 1 -->
+            <div class="service-card animate__animated" data-animation="animate__fadeInLeft">
+                <div class="service-card__image">
+                    <img src="images/service-1.jpg" alt="Ленточный фундамент" loading="lazy">
+                    <div class="service-badge">Хит продаж</div>
+                </div>
+                <div class="service-card__content">
+                    <h2>Ленточный фундамент</h2>
+                    <div class="service-features">
+                        <div class="feature">
+                            <img src="images/icon-time.svg" alt="Срок">
+                            <span>Срок: 7-14 дней</span>
+                        </div>
+                        <div class="feature">
+                            <img src="images/icon-warranty.svg" alt="Гарантия">
+                            <span>Гарантия: 15 лет</span>
+                        </div>
+                    </div>
+                    <p>Идеальное решение для кирпичных и блочных домов. Формирует прочное основание по периметру всех несущих стен.</p>
+                    <ul class="service-benefits">
+                        <li>Глубина заложения от 0.5 до 2 м</li>
+                        <li>Работаем в любое время года</li>
+                        <li>Используем арматуру 12-16 мм</li>
+                    </ul>
+                    <div class="service-actions">
+                        <div class="price-block">
+                            <span class="price">от 3 500 ₽/м²</span>
+                            <span class="price-note">*Точная стоимость после замера</span>
+                        </div>
+                        <button class="btn btn--primary btn--pulse">Заказать расчет</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка услуги 2 (аналогичная структура) -->
+            <div class="service-card animate__animated" data-animation="animate__fadeInRight">
+                <!-- Содержимое карточки -->
+            </div>
+
+            <!-- Дополнительные услуги -->
+            <div class="additional-services">
+                <h2 class="section-title">Дополнительные услуги</h2>
+                <div class="additional-grid">
+                    <div class="additional-card animate__animated" data-animation="animate__zoomIn">
+                        <div class="additional-card__icon">
+                            <img src="images/icon-waterproofing.svg" alt="Гидроизоляция">
+                        </div>
+                        <h3>Гидроизоляция</h3>
+                        <p>Защита от грунтовых вод и влаги</p>
+                        <span class="price">от 450 ₽/м²</span>
+                    </div>
+                    <!-- Еще 3 карточки -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (как в главном файле) -->
     
-    <!-- Такой же cta-блок как в index.html -->
-    <!-- Такой же footer как в index.html -->
+    <script src="js/services-animations.js"></script> <!-- Новый файл скриптов -->
 </body>
 </html>
